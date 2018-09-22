@@ -64,14 +64,7 @@
 							<li><a href="#service-section">SERVICES</a></li>
 							<li><a href="#project-section">PROJETS</a></li>
 							<li><a href="#team-section">EQUIPE</a></li>
-<!-- 							<li><a href="#skill-section">COMPETENCES</a></li>
- -->							<li><a href="#our-client">CLIENTS</a></li>
-<!-- 							<li><a href="#pricing-section">Pricing</a></li>
-							<li class="dropdown-holder"><a href="#blog-section">BLOG</a>
-								<ul class="sub-menu">
-					       			<li><a href="blog-details.html" class="tran3s">Blog Details</a></li>
-					       		</ul>
-							</li> -->
+ 							<li><a href="#our-client">CLIENTS</a></li>
 							<li><a href="#contact-section">CONTACT</a></li>
 					     </ul>
 					   </div><!-- /.navbar-collapse -->
@@ -90,12 +83,11 @@
 					<!-- START REVOLUTION SLIDER 5.0.7 auto mode -->
 						<div id="main-banner-slider" class="rev_slider video-slider" data-version="5.0.7">
 							<ul>
-								<% blog('projets').articles.each_with_index do |article,i| %>
-								<% if article.data[:publish] == "Oui" %>
+								<% dato.projets.each_with_index do |p,i| %>
 								<!-- SLIDE1  -->
-								<li data-index="rs-<%= i %>" data-transition="fade" data-slotamount="default" data-easein="default" data-easeout="default" data-masterspeed="default"  data-title="<%= article.data[:title] %>" data-description="">
+								<li data-index="rs-<%= i %>" data-transition="fade" data-slotamount="default" data-easein="default" data-easeout="default" data-masterspeed="default"  data-title="<%= p.titre_du_projet %>" data-description="">
 									<!-- MAIN IMAGE -->
-									<img src="<%= article.data[:thumbnail]%>"  alt="image" class="rev-slidebg" data-bgparallax="3" data-bgposition="center center" data-duration="20000" data-ease="Linear.easeNone" data-kenburns="on" data-no-retina="" data-offsetend="0 0" data-offsetstart="0 0" data-rotateend="0" data-rotatestart="0" data-scaleend="100" data-scalestart="140">
+									<img src="<%= p.photo_du_projet.url %>"  alt="image" class="rev-slidebg" data-bgparallax="3" data-bgposition="center center" data-duration="20000" data-ease="Linear.easeNone" data-kenburns="on" data-no-retina="" data-offsetend="0 0" data-offsetstart="0 0" data-rotateend="0" data-rotatestart="0" data-scaleend="100" data-scalestart="140">
 									<!-- LAYERS -->
 
 									<!-- LAYER NR. 1 -->
@@ -116,7 +108,7 @@
 										data-splitout="none" 
 										data-responsive_offset="on" 
 										style="z-index: 6; white-space: nowrap;">
-										<h1> <%= article.data[:title] %></h1>
+										<h1> <%= p.titre_du_projet %></h1>
 									</div>
 
 									<!-- LAYER NR. 2 -->
@@ -137,7 +129,7 @@
 										data-splitout="none" 
 										data-responsive_offset="on" 
 										style="z-index: 6; white-space: nowrap;">
-										<h6><%= article.data[:description] %></h6>
+										<h6><%= p.description %></h6>
 									</div>
 
 
@@ -159,7 +151,6 @@
 									</div>
 								
 								</li>
-								<% end %>	
 								<% end %>
 
 							</ul>	
@@ -210,7 +201,7 @@
 									<i class="fas fa-container-storage" aria-hidden="true"></i>
 								</div>
 								<h5><a href="#" class="tran3s">Contenaires</a></h5>
-										<p><% dato.infos[0].contenaires %> </p>
+										<p><% dato.infos[0].main_contenaires %> </p>
 <!-- 								<a href="#" class="more tran3s hvr-bounce-to-right">More Details</a> -->
 							</div> <!-- /.single-about-content -->
 						</div> <!-- /.col -->
@@ -333,7 +324,7 @@
 					<div class="project-gallery clear-fix">
 
 					<% dato.projets.each_with_index do |p,i| %>
-							<div class="mix grid-item photo om <%=article.data[:category]%>">
+							<div class="mix grid-item photo om <%= p.category %>">
 								<div class="single-img">
 									<img src="<%=p.photo_du_projet.url%>" alt="Image">
 									<div class="opacity">
