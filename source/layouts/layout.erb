@@ -1,17 +1,67 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!-- Use the title from a page's frontmatter if it has one -->
-    <title><%= current_page.data.title %></title>
+    <meta charset="UTF-8">
+    <!-- For IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- For Resposive Device -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Free Cube </title>
     <%= stylesheet_link_tag "application" %>
     <%= javascript_include_tag "application" %>
     <%= favicon_tag 'images/favicon.png' %>
-  </head>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="56x56" href="../../images/fav-icon/icon.png">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+
+    <!-- Main style sheet -->
+    <link rel="stylesheet" type="text/css" href="../../css/style.css">
+    <!-- responsive style sheet -->
+    <link rel="stylesheet" type="text/css" href="../../css/responsive.css">
+
+
+    <!-- Fix Internet Explorer ______________________________________-->
+
+    <!--[if lt IE 9]>
+      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+      <script src="vendor/html5shiv.js"></script>
+      <script src="vendor/respond.js"></script>
+    <![endif]-->
+      
+  </head>  
   <body>
+    <%= partial "partials/navbar"  %>
     <%= yield %>
+    <%= partial "partials/footer" %>
+
+
+      <!-- =============================================
+        Loading Transition
+      ============================================== -->
+      <div id="loader-wrapper">
+        <div id="preloader_1">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+              </div>
+      </div>
+
+      
+          <!-- Scroll Top Button -->
+      <button class="scroll-top tran3s p-color-bg">
+        <i class="fa fa-long-arrow-up" aria-hidden="true"></i>
+      </button>
+    <script type="text/javascript" src="../../vendor/jquery.2.2.3.min.js"></script>
+
+    <script type="text/javascript" src="../../vendor/bootstrap/bootstrap.min.js"></script>
+
+    <script type="text/javascript" src="../../js/theme.js"></script>
+
   </body>
-</html>
+  </html>

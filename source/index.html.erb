@@ -44,7 +44,7 @@
 			-->
 			<header class="theme-main-header">
 				<div class="container">
-					<a href="index.html" class="logo float-left tran4s"><img src="<% dato.infos[0].logo.url %>" alt="Logo" style="height: 50px; margin-bottom: 10px;"></a>
+					<a href="index.html" class="logo float-left tran4s"><img src="<%= dato.infos[0].logo.url %>" alt="Logo" style="height: 50px; margin-bottom: 10px;"></a>
 					
 					<!-- ========================= Theme Feature Page Menu ======================= -->
 					<nav class="navbar float-right theme-main-menu one-page-menu">
@@ -168,8 +168,8 @@
 			<section id="about-us">
 				<div class="container">
 					<div class="theme-title">
-						<h2><% dato.infos[0].title %> </h2>
-						<p><% dato.infos[0].description %> </p>
+						<h2><%= dato.infos[0].title %> </h2>
+						<p><%= dato.infos[0].description %> </p>
 					</div> <!-- /.theme-title -->
 
 					<div class="row">
@@ -179,7 +179,7 @@
 									<i class="fa fa-pencil-square-o" aria-hidden="true"></i>
 								</div>
 								<h5><a href="#" class="tran3s">Suivi de Chantier</a></h5>
-									<p><% dato.infos[0].main_chantier %> </p>
+									<p><%= dato.infos[0].main_chantier %> </p>
 <!-- 								<a href="#" class="more tran3s hvr-bounce-to-right">More Details</a> -->
 							</div> <!-- /.single-about-content -->
 						</div> <!-- /.col -->
@@ -190,7 +190,7 @@
 									<i class="fas fa-building" aria-hidden="true"></i>
 								</div>
 								<h5><a href="#" class="tran3s">Construction</a></h5>
-									<p><% dato.infos[0].main_construction %> </p>
+									<p><%= dato.infos[0].main_construction %> </p>
 <!-- 								<a href="#" class="more tran3s hvr-bounce-to-right">More Details</a> -->
 							</div> <!-- /.single-about-content -->
 						</div> <!-- /.col -->
@@ -201,7 +201,7 @@
 									<i class="fas fa-container-storage" aria-hidden="true"></i>
 								</div>
 								<h5><a href="#" class="tran3s">Contenaires</a></h5>
-										<p><% dato.infos[0].main_contenaires %> </p>
+										<p><%= dato.infos[0].main_contenaires %> </p>
 <!-- 								<a href="#" class="more tran3s hvr-bounce-to-right">More Details</a> -->
 							</div> <!-- /.single-about-content -->
 						</div> <!-- /.col -->
@@ -212,7 +212,7 @@
 									<i class="fa fa-line-chart" aria-hidden="true"></i>
 								</div>
 								<h5><a href="#" class="tran3s">Conception</a></h5>
-									<p><% dato.infos[0].main_conseil %> </p>
+									<p><%= dato.infos[0].main_conseil %> </p>
 <!-- 								<a href="#" class="more tran3s hvr-bounce-to-right">More Details</a> -->
 							</div> <!-- /.single-about-content -->
 						</div> <!-- /.col -->
