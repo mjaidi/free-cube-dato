@@ -44,7 +44,7 @@
 			-->
 			<header class="theme-main-header">
 				<div class="container">
-					<a href="index.html" class="logo float-left tran4s"><img src="<%= dato.infos[0].logo.url %>" alt="Logo" style="height: 50px; margin-bottom: 10px;"></a>
+					<a href="index.html" class="logo float-left tran4s"><img src="<%= dato.info.logo.url %>" alt="Logo" style="height: 50px; margin-bottom: 10px;"></a>
 					
 					<!-- ========================= Theme Feature Page Menu ======================= -->
 					<nav class="navbar float-right theme-main-menu one-page-menu">
@@ -89,7 +89,6 @@
 									<!-- MAIN IMAGE -->
 									<img src="<%= p.photo_du_projet.url %>"  alt="image" class="rev-slidebg" data-bgparallax="3" data-bgposition="center center" data-duration="20000" data-ease="Linear.easeNone" data-kenburns="on" data-no-retina="" data-offsetend="0 0" data-offsetstart="0 0" data-rotateend="0" data-rotatestart="0" data-scaleend="100" data-scalestart="140">
 									<!-- LAYERS -->
-
 									<!-- LAYER NR. 1 -->
 									<div class="tp-caption" 
 										data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" 
@@ -149,7 +148,7 @@
 										data-responsive_offset="on">
 										<a href="#project-section" class="project-button hvr-bounce-to-right">Voir Nos Projets</a>
 									</div>
-								
+
 								</li>
 								<% end %>
 
@@ -168,8 +167,8 @@
 			<section id="about-us">
 				<div class="container">
 					<div class="theme-title">
-						<h2><%= dato.infos[0].title %> </h2>
-						<p><%= dato.infos[0].description %> </p>
+						<h2><%= dato.info.title %> </h2>
+						<p><%= dato.info.description %> </p>
 					</div> <!-- /.theme-title -->
 				
 				</div> <!-- /.container -->
@@ -185,7 +184,7 @@
 				<div class="container">
 					<div class="theme-title">
 						<h2>NOS SERVICES</h2>
-						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type.</p>
+						<p><%= dato.info.services_texte %></p>
 					</div> <!-- /.theme-title -->
 
 					<div class="row">
@@ -219,7 +218,7 @@
 				<div class="container">
 					<div class="theme-title">
 						<h2>Tous Nos Projets</h2>
-						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type.</p>
+						<p><%= dato.info.projets_texte %></p>
 					</div> <!-- /.theme-title -->
 
 					<div class="project-menu">
@@ -264,101 +263,13 @@
 
 			<div class="page-middle-banner">
 				<div class="opacity">
-					<h3>We Create Creative <span class="p-color">&amp;</span> Best Unique Design</h3>
-					<a href="#" class="hvr-bounce-to-right">Let's Work Together</a>
+					<h3>Nous Vous Accompagnons <span class="p-color">&amp;</span> Meilleur Service</h3>
+					<a href="#contact-section" class="hvr-bounce-to-right">Travaillons Ensemble</a>
 				</div> <!-- /.opacity -->
 			</div> <!-- /.page-middle-banner -->
 
 
-			<!--
-			=====================================================
-				Team Section
-			=====================================================
-			-->
-			<div id="team-section">
-				<div class="container">
-					<div class="theme-title">
-						<h2>Meet our Team</h2>
-						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type.</p>
-					</div> <!-- /.theme-title -->
-
-					<div class="clear-fix team-member-wrapper">
-						<div class="float-left">
-							<div class="single-team-member">
-								<div class="img">
-									<img src="images/team/1.jpg" alt="Image">
-									<div class="opacity tran4s">
-										<h4>Gonzalez Gina</h4>
-										<span>Web Developer</span>
-										<p>On the other hand, We denounce ut with righteo indignation and dislike men who are so beguiled and demoralized.</p>
-									</div>
-								</div> <!-- /.img -->
-								<div class="member-name">
-									<h6>Gonzalez Gina</h6>
-									<p>Web Developer</p>
-									<ul>
-										<li><a href="#" class="tran3s round-border"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-										<li><a href="#" class="tran3s round-border"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-										<li><a href="#" class="tran3s round-border"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
-										<li><a href="#" class="tran3s round-border"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-									</ul>
-								</div> <!-- /.member-name -->
-							</div> <!-- /.single-team-member -->
-						</div> <!-- /float-left -->
-
-						<div class="float-left">
-							<div class="single-team-member">
-								<div class="img">
-									<img src="images/team/2.jpg" alt="Image">
-									<div class="opacity tran4s">
-										<h4>Holly Vincenzini</h4>
-										<span>Media Partner</span>
-										<p>On the other hand, We denounce ut with righteo indignation and dislike men who are so beguiled and demoralized.</p>
-									</div>
-								</div> <!-- /.img -->
-								<div class="member-name">
-									<h6>Holly Vincenzini</h6>
-									<p>Media Partner</p>
-									<ul>
-										<li><a href="#" class="tran3s round-border"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-										<li><a href="#" class="tran3s round-border"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-										<li><a href="#" class="tran3s round-border"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
-										<li><a href="#" class="tran3s round-border"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-									</ul>
-								</div> <!-- /.member-name -->
-							</div> <!-- /.single-team-member -->
-						</div> <!-- /float-left -->
-
-						<div class="float-left">
-							<div class="single-team-member">
-								<div class="img">
-									<img src="images/team/3.jpg" alt="Image">
-									<div class="opacity tran4s">
-										<h4>Ramirez Minita</h4>
-										<span>Graphic Design</span>
-										<p>On the other hand, We denounce ut with righteo indignation and dislike men who are so beguiled and demoralized.</p>
-									</div>
-								</div> <!-- /.img -->
-								<div class="member-name">
-									<h6>Ramirez Minita</h6>
-									<p>Graphic Design</p>
-									<ul>
-										<li><a href="#" class="tran3s round-border"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-										<li><a href="#" class="tran3s round-border"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-										<li><a href="#" class="tran3s round-border"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
-										<li><a href="#" class="tran3s round-border"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-									</ul>
-								</div> <!-- /.member-name -->
-							</div> <!-- /.single-team-member -->
-						</div> <!-- /float-left -->
-					</div> <!-- /.team-member-wrapper -->
-				</div> <!-- /.conatiner -->
-			</div> <!-- /#team-section -->
-
-
-
-			
-
+		
 
 			<!--
 			=====================================================
@@ -368,8 +279,8 @@
 			<div id="our-client">
 				<div class="container">
 					<div class="theme-title">
-						<h2>OUR HAPPY CLIENTS</h2>
-						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type.</p>
+						<h2>NOS CLIENTS</h2>
+						<p><%= dato.info.clients_texte %></p>
 					</div> <!-- /.theme-title -->
 
 						<div class="client-slider">
@@ -428,25 +339,24 @@
 					<div class="clear-fix contact-address-content">
 						<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
 							<div class="left-side">
-								<h2>Contact Info</h2>
-								<p>There are many variations of passages of Lorem Ipsum available, but the majori have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a pas of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. <br><br>
-								Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor ididunt ut labore et dolore magna aliqua.</p>
+								<h2>INFO CONTACT</h2>
+								<p><%= dato.info.contact_texte %></p>
 
 								<ul>
 									<li>
 										<div class="icon tran3s round-border p-color-bg"><i class="fa fa-map-marker" aria-hidden="true"></i></div>
 										<h6>Address</h6>
-										<p>Freedom Way, Jersey City, NJ 07305, USA</p>
+										<p><%= dato.info.addresse %></p>
 									</li>
 									<li>
 										<div class="icon tran3s round-border p-color-bg"><i class="fa fa-phone" aria-hidden="true"></i></div>
-										<h6>Phone</h6>
-										<p>+88 01911854378</p>
+										<h6>Téléphone</h6>
+										<p><%= dato.info.telephone %></p>
 									</li>
 									<li>
 										<div class="icon tran3s round-border p-color-bg"><i class="fa fa-envelope-o" aria-hidden="true"></i></div>
 										<h6>Email</h6>
-										<p>backpiper.com@gmail.com</p>
+										<p><%= dato.info.email %></p>
 									</li>
 								</ul>
 							</div> <!-- /.left-side -->
@@ -455,7 +365,7 @@
 
 						<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
 							<div class="map-area">
-								<h2>Our Location</h2>
+								<h2>Notre Position</h2>
 								<div id="map"></div>
 							</div> <!-- /.map-area -->
 						</div> <!-- /.col- -->
@@ -465,33 +375,33 @@
 
 					<!-- Contact Form -->
 					<div class="send-message">
-						<h2>Send Message</h2>
+						<h2>Envoyer un message</h2>
 
 						<form action="inc/sendemail.php" class="form-validation" autocomplete="off" method="post">
 							<div class="row">
 								<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
 									<div class="single-input">
-										<input type="text" placeholder="First Name*" name="Fname">
+										<input type="text" placeholder="Prénom*" name="Fname">
 									</div> <!-- /.single-input -->
 								</div>
 								<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
 									<div class="single-input">
-										<input type="text" placeholder="Last Name*" name="Lname">
+										<input type="text" placeholder="Nom*" name="Lname">
 									</div> <!-- /.single-input -->
 								</div>
 								<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
 									<div class="single-input">
-										<input type="email" placeholder="Your Email*" name="email">
+										<input type="email" placeholder="Email*" name="email">
 									</div> <!-- /.single-input -->
 								</div>
 							</div> <!-- /.row -->
 							<div class="single-input">
-								<input type="text" placeholder="Subject" name="sub">
+								<input type="text" placeholder="Sujet" name="sub">
 							</div> <!-- /.single-input -->
-							<textarea placeholder="Write Message" name="message"></textarea>
+							<textarea placeholder="Ecrire un message" name="message"></textarea>
 
 
-							<button class="tran3s p-color-bg">Send Message</button>
+							<button class="tran3s p-color-bg">Envoyer Message</button>
 						</form>
 
 
@@ -501,7 +411,7 @@
 							<div id="success">
 								<button class="closeAlert"><i class="fa fa-times" aria-hidden="true"></i></button>
 								<div class="wrapper">
-					               	<p>Your message was sent successfully.</p>
+					               	<p>Votre méssage à été envoyé avec succès.</p>
 					             </div>
 					        </div>
 					    </div> <!-- End of .alert_wrapper -->
@@ -509,7 +419,7 @@
 					        <div id="error">
 					           	<button class="closeAlert"><i class="fa fa-times" aria-hidden="true"></i></button>
 					           	<div class="wrapper">
-					               	<p>Sorry!Something Went Wrong.</p>
+					               	<p>Déslolé!Une Erreur c'est produite.</p>
 					            </div>
 					        </div>
 					    </div> <!-- End of .alert_wrapper -->
@@ -526,7 +436,7 @@
 			-->
 			<footer>
 				<div class="container">
-					<a href="index.html" class="logo"><img src="<% dato.infos[0].logo.url %>" alt="Logo" style= "height: 50px;"></a>
+					<a href="index.html" class="logo"><img src="<% dato.info.logo.url %>" alt="Logo" style= "height: 50px;"></a>
 
 					<ul>
 						<li><a href="#" class="tran3s round-border"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>

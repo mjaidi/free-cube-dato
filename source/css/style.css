@@ -430,6 +430,11 @@ animation-delay: .8s;
   border-width: 1px;
   text-transform: uppercase;
 }
+
+.banner h1 {
+    background: rgba(0,0,0,0.2);
+    padding: 7px;
+    border-radius: 2px;
 /*** 
 
 ====================================================================
