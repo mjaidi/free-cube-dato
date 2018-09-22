@@ -231,7 +231,7 @@ animation-delay: .8s;
 }
 .theme-title {
   text-align: center;
-  margin: 95px 0 0 0;
+  margin: 95px 0 95px 0;
 }
 .theme-title h2 {
   position: relative;
@@ -493,6 +493,7 @@ animation-delay: .8s;
   margin-bottom: 20px;
   padding: 118px 23px 65px 23px;
   overflow: hidden;
+  border-radius: 5px;
 }
 #service-section .single-service-content p {
   -webkit-transition-delay: 0.3s; /* Safari */
@@ -513,18 +514,14 @@ animation-delay: .8s;
 }
 #service-section .single-service-content .icon-heading .icon {
   font-size: 48px;
-  color:#808489;
+  color: white;
   width: 80px;
   margin: 0 auto;
-  background: #232a34;
 }
 #service-section .single-service-content .icon-heading a {
-  color:#808489;
+  color: white;
   text-transform: capitalize;
   margin-top: 33px;
-}
-#service-section .single-service-content:hover .icon-heading {
-  top:-10px;
 }
 #service-section .single-service-content:hover p {
   opacity: 1;
@@ -534,6 +531,20 @@ animation-delay: .8s;
       -ms-transform: translate3D(0,0,0);
        -o-transform: translate3D(0,0,0);
           transform: translate3D(0,0,0);
+  background: rgba(35, 42, 52,0.4);
+  border-radius: 5px;
+  padding: 5px;
+}
+#service-section .single-service-content:hover .icon-heading {
+  top:-10px;
+}
+#service-section .single-service-content:hover .icon-heading h6 a{
+  color: white;
+}
+#service-section .single-service-content:hover .icon-heading .icon {
+
+  background: #232a34;
+  border-radius: 10px;
 }
 /*** 
 

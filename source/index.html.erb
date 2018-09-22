@@ -171,7 +171,7 @@
 						<h2><%= dato.infos[0].title %> </h2>
 						<p><%= dato.infos[0].description %> </p>
 					</div> <!-- /.theme-title -->
-
+				
 				</div> <!-- /.container -->
 			</section> <!-- /#about-us -->
 
@@ -190,13 +190,13 @@
 
 					<div class="row">
 					
-					<% dato.services.each do |p,i| %>
+					<% dato.services.each do |p| %>
 
 						<div class="col-lg-4 col-md-4 col-sm-6">
-							<div class="single-service-content" style= "background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('<%= p.photo.url')); background-size: cover; background-position: center;">
+							<div class="single-service-content" style= "background-image: linear-gradient(-225deg, rgba(0,101,168,0.4) 0%, rgba(0,36,61,0.4) 60%), url('<%= p.photo.url %>'); background-size: cover; background-position: center;">
 								<div class="icon-heading tran3s">
-									<div class="icon tran3s"><%= p.icon %></div>
-									<h6><a href="#" class="tran3s"><%= p.nom %></a></h6>
+									<div class="icon tran3s"> <%= p.icon %> </div>
+									<h6> <a href="#" class="tran3s"> <%= p.nom %> </a> </h6>
 								</div>
 								<p><%= p.description %> </p>
 							</div> <!-- /.single-service-content -->
