@@ -692,7 +692,7 @@ animation-delay: .8s;
   margin-top: 70px;
 }
 .page-middle-banner .opacity {
-  background: rgba(0,0,0,0.8);
+  background: rgba(0,0,0,0.5);
   text-align: center;
   padding: 134px 0 137px 0;
 }
