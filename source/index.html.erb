@@ -44,9 +44,7 @@
 			-->
 			<header class="theme-main-header">
 				<div class="container">
-					<a href="index.html" class="logo float-left tran4s"><img src="<% data.info.each do |info| %>
-						<%= info[1] if info[0] == 'logo'%>
-					<% end %>" alt="Logo" style="height: 50px; margin-bottom: 10px;"></a>
+					<a href="index.html" class="logo float-left tran4s"><img src="<% dato.infos[0].logo.url %>" alt="Logo" style="height: 50px; margin-bottom: 10px;"></a>
 					
 					<!-- ========================= Theme Feature Page Menu ======================= -->
 					<nav class="navbar float-right theme-main-menu one-page-menu">
@@ -179,10 +177,8 @@
 			<section id="about-us">
 				<div class="container">
 					<div class="theme-title">
-						<% data.info.each do |info| %>
-							<%= "<h2> #{info[1]}</h2>" if info[0] == 'title'%>
-							<%= "<p> #{info[1]}</p>" if info[0] == 'description'%>
-						<% end %>
+						<h2><% dato.infos[0].title %> </h2>
+						<p><% dato.infos[0].description %> </p>
 					</div> <!-- /.theme-title -->
 
 					<div class="row">
@@ -192,9 +188,7 @@
 									<i class="fa fa-pencil-square-o" aria-hidden="true"></i>
 								</div>
 								<h5><a href="#" class="tran3s">Suivi de Chantier</a></h5>
-									<% data.info.each do |info| %>
-										<%= "<p> #{info[1]}</p>" if info[0] == 'main-chantier'%>
-									<% end %>
+									<p><% dato.infos[0].main_chantier %> </p>
 <!-- 								<a href="#" class="more tran3s hvr-bounce-to-right">More Details</a> -->
 							</div> <!-- /.single-about-content -->
 						</div> <!-- /.col -->
@@ -205,9 +199,7 @@
 									<i class="fas fa-building" aria-hidden="true"></i>
 								</div>
 								<h5><a href="#" class="tran3s">Construction</a></h5>
-									<% data.info.each do |info| %>
-										<%= "<p> #{info[1]}</p>" if info[0] == 'main-construction'%>
-									<% end %>
+									<p><% dato.infos[0].main_construction %> </p>
 <!-- 								<a href="#" class="more tran3s hvr-bounce-to-right">More Details</a> -->
 							</div> <!-- /.single-about-content -->
 						</div> <!-- /.col -->
@@ -218,9 +210,7 @@
 									<i class="fas fa-container-storage" aria-hidden="true"></i>
 								</div>
 								<h5><a href="#" class="tran3s">Contenaires</a></h5>
-										<% data.info.each do |info| %>
-										<%= "<p> #{info[1]}</p>" if info[0] == 'main-contenaires'%>
-									<% end %>
+										<p><% dato.infos[0].contenaires %> </p>
 <!-- 								<a href="#" class="more tran3s hvr-bounce-to-right">More Details</a> -->
 							</div> <!-- /.single-about-content -->
 						</div> <!-- /.col -->
@@ -231,9 +221,7 @@
 									<i class="fa fa-line-chart" aria-hidden="true"></i>
 								</div>
 								<h5><a href="#" class="tran3s">Conception</a></h5>
-									<% data.info.each do |info| %>
-										<%= "<p> #{info[1]}</p>" if info[0] == 'main-conseil'%>
-									<% end %>
+									<p><% dato.infos[0].main_conseil %> </p>
 <!-- 								<a href="#" class="more tran3s hvr-bounce-to-right">More Details</a> -->
 							</div> <!-- /.single-about-content -->
 						</div> <!-- /.col -->
@@ -344,23 +332,21 @@
 
 					<div class="project-gallery clear-fix">
 
-					<% blog('projets').articles.each_with_index do |article, i| %>
-					  <% if article.data[:publish] == "Oui" %>
+					<% dato.projets.each_with_index do |p,i| %>
 							<div class="mix grid-item photo om <%=article.data[:category]%>">
 								<div class="single-img">
-									<img src="<%=article.data[:thumbnail]%>" alt="Image">
+									<img src="<%=p.photo_du_projet.url%>" alt="Image">
 									<div class="opacity">
 										<div class="border-shape"><div><div>
-											<h6><%= link_to article.title, article, target: "_blank" %></h6>
+											<h6><%= link_to p.titre_du_projet, "projets/#{i}.html", target: "_blank" %></h6>
 											<ul>
-												<li><%= article.data[:description] %></li>
+												<li><%= p.description %></li>
 											</ul></div></div>
 										</div> <!-- /.border-shape -->
 									</div> <!-- /.opacity -->
 								</div> <!-- /.single-img -->
 							</div> <!-- /.grid-item -->
 					  <% end %>       
-					<% end %>
 
 
 						
@@ -487,20 +473,18 @@
 						<div class="client-slider">
 
 								<% 3.times do %>
-								<% blog('reviews').articles.each do |article| %>
-								  <% if article.data[:publish] == "Oui" %>
+								<% dato.reviews.each do |r| %>
 										<div class="item ">
-											<img src="<%= article.data[:thumbnail] %>" alt="Client">
-											<p> <%= article.data[:description] %></p>
-											<h6>- <%= article.data[:nom] %> -</h6>
+											<img src="<%= r.photo.url %>" alt="Client">
+											<p> <%= r.commentaire %></p>
+											<h6>- <%= r.nom %> -</h6>
 											<h6>
-												<% article.data[:review].times do %>
+												<% r.rating.times do %>
 													<i class="fa fa-star"></i>
 												<% end %>
 											</h6>
 										</div> <!-- /.item -->
 								  <% end %>       
-								<% end %>
 								<% end %>
 
 
@@ -640,10 +624,7 @@
 			-->
 			<footer>
 				<div class="container">
-					<a href="index.html" class="logo"><img src="
-						<% data.info.each do |info| %>
-						<%= info[1] if info[0] == 'logo'%>
-					<% end %>" alt="Logo" style= "height: 50px;"></a>
+					<a href="index.html" class="logo"><img src="<% dato.infos[0].logo.url %>" alt="Logo" style= "height: 50px;"></a>
 
 					<ul>
 						<li><a href="#" class="tran3s round-border"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
