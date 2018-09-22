@@ -1,0 +1,43 @@
+---
+pageable: true
+per_page: 10
+title: Home Page
+---
+<% if paginate && num_pages > 1 %>
+  <p>Page <%= page_number %> of <%= num_pages %></p>
+
+  <% if prev_page %>
+    <p><%= link_to 'Previous page', prev_page %></p>
+  <% end %>
+<% end %>
+
+<% blog('projets').articles.each_with_index do |article, i| %>
+  <% if article.data[:publish] == "Oui" %>
+    <h2><%= link_to article.title, article %> <span><%= article.date.strftime('%b %e') %></span></h2>
+    <!-- use article.summary(250) if you have Nokogiri available to show just
+         the first 250 characters -->
+         <%= article.data[:description] %>
+         <%= image_tag(article.data[:thumbnail]) %>
+  <% end %>       
+<% end %>
+
+<% blog('reviews').articles.each_with_index do |article, i| %>
+  <% if article.data[:publish] == "Oui" %>
+    <h2><%= link_to article.title, article %> <span><%= article.date.strftime('%b %e') %></span></h2>
+    <!-- use article.summary(250) if you have Nokogiri available to show just
+         the first 250 characters -->
+         <%= article.data[:description] %>
+         <%= image_tag(article.data[:thumbnail]) %>
+  <% end %>       
+<% end %>
+
+<% if paginate %>
+  <% if next_page %>
+    <p><%= link_to 'Next page', next_page %></p>
+  <% end %>
+<% end %>
+
+<br>
+<% data.info.each do |info| %>
+<%= info[1] if info[0] == "title" %>
+<% end %>
