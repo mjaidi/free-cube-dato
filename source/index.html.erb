@@ -189,17 +189,20 @@
 					</div> <!-- /.theme-title -->
 
 					<div class="row">
-
+					
+					<% dato.services.each do |p,i| %>
 
 						<div class="col-lg-4 col-md-4 col-sm-6">
-							<div class="single-service-content">
+							<div class="single-service-content" style= "background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('<%= p.photo.url')); background-size: cover; background-position: center;">
 								<div class="icon-heading tran3s">
-									<div class="icon tran3s"><i class="fa fa-paint-brush" aria-hidden="true"></i></div>
-									<h6><a href="#" class="tran3s">Web Design</a></h6>
+									<div class="icon tran3s"><%= p.icon %></div>
+									<h6><a href="#" class="tran3s"><%= p.nom %></a></h6>
 								</div>
-								<p>Lorem ipsum dolor sit amet, consectetur scing elit, sed do eiusmod, tempor incididunt labore et dolore magna aliqua. Ut enim ad minim ut veniam, quis nostrud exercitation ullamco aliquip ex ea commodo consequat. </p>
+								<p><%= p.description %> </p>
 							</div> <!-- /.single-service-content -->
 						</div> <!-- /.col-lg -->
+						
+					<% end %>
 
 					</div> <!-- /.row -->
 				</div> <!-- /.container -->
