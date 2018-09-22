@@ -62,3 +62,8 @@ activate :blog do |blog|
   blog.tag_template = "tag.html"
   blog.calendar_template = "calendar.html"
 end
+
+
+activate :dato,
+  token: '84c24daaaaace03672cc48af61d6e2',
+  base_url: 'https://wonderful-sammet-fd7ce6.netlify.com'

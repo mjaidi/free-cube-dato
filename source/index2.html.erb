@@ -31,6 +31,15 @@ title: Home Page
   <% end %>       
 <% end %>
 
+<% dato.projets.each do |p| %>
+  <%= image_tag(p.photo_du_projet, style: "height: 80px") %>
+  <%= p.titre_du_projet %>
+  <%= p.description %>
+
+<% end %>
+
+
+
 <% if paginate %>
   <% if next_page %>
     <p><%= link_to 'Next page', next_page %></p>
