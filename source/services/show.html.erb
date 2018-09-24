@@ -1,0 +1,14 @@
+<% service = dato.services[index] %>
+
+    <div id="main" role="main" class="text-center">
+      <div class="background-image-projet" style="background-image: url('<%= image_path(service.photo.url)%>'); background-size: cover; height: 60vh; width: 100%; background-position: center;">
+      </div>
+        <div class="">
+          <h2><%= service.nom %></h2>
+        </div>
+      <p><%= service.description %></p>
+
+    </div>
+    <br>
+  <hr>
+  <br>

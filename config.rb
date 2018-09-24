@@ -27,6 +27,6 @@ activate :dato,
   token: '3c4d35d10bd4da8f492a8570ad39ca',
   base_url: 'https://goofy-roentgen-7dfec9.netlify.com/'
 
-dato.projets.each_with_index do |_info, i|
-  proxy "/projets/#{i}.html", "/projets/show.html", locals: { index: i }, ignore: true
+dato.services.each_with_index do |_info, i|
+  proxy "/services/#{i}.html", "/services/show.html", locals: { index: i }, ignore: true
 end

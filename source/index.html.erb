@@ -188,13 +188,13 @@
 
 					<div class="row">
 					
-					<% dato.services.each do |p| %>
+					<% dato.services.each_with_index do |p,i| %>
 
 						<div class="col-lg-4 col-md-4 col-sm-6">
 							<div class="single-service-content" style= "background-image: linear-gradient(-225deg, rgba(0,101,168,0.4) 0%, rgba(0,36,61,0.4) 60%), url('<%= p.photo.url %>'); background-size: cover; background-position: center;">
 								<div class="icon-heading tran3s">
 									<div class="icon tran3s"> <%= p.icon %> </div>
-									<h6> <a href="#" class="tran3s"> <%= p.nom %> </a> </h6>
+									<h6> <%= link_to p.nom, "services/#{i}.html", class: "tran3s", target: "_blank" %> </h6>
 								</div>
 								<p><%= p.description %> </p>
 							</div> <!-- /.single-service-content -->
@@ -223,10 +223,10 @@
 					<div class="project-menu">
 						<ul>
 	        				<li class="filter active tran3s" data-filter="all">Tous</li>
-							<li class="filter tran3s" data-filter=".container">Containers</li>
-							<li class="filter tran3s" data-filter=".villa">Villas</li>
-							<li class="filter tran3s" data-filter=".bureau">Bureaux</li>
-							<li class="filter tran3s" data-filter=".rénovation">Rénovation</li>
+							<li class="filter tran3s" data-filter=".Container">Containers</li>
+							<li class="filter tran3s" data-filter=".Villa">Villas</li>
+							<li class="filter tran3s" data-filter=".Bureau">Bureaux</li>
+							<li class="filter tran3s" data-filter=".Rénovation">Rénovation</li>
 	        			</ul>
 					</div>
 
@@ -238,7 +238,7 @@
 									<img src="<%=p.photo_du_projet[0].url%>" alt="Image">
 									<div class="opacity">
 										<div class="border-shape"><div><div>
-											<h6><%= link_to p.titre_du_projet, "projets/#{i}.html", target: "_blank" %></h6>
+											<h6><%= p.titre_du_projet %></h6>
 											<ul>
 												<li><%= p.description %></li>
 											</ul></div></div>
@@ -249,7 +249,6 @@
 					  <% end %>       
 
 
-						
 					</div> <!-- /.project-gallery -->
 				</div> <!-- /.container -->
 			</div> <!-- /#project-section -->
@@ -262,7 +261,7 @@
 
 			<div class="page-middle-banner">
 				<div class="opacity">
-					<h3>Nous Vous Accompagnons <span class="p-color">&amp;</span> Meilleur Service</h3>
+					<h3>Nous vous accompagnons dans tous vos projets</h3>
 					<a href="#contact-section" class="hvr-bounce-to-right">Travaillons Ensemble</a>
 				</div> <!-- /.opacity -->
 			</div> <!-- /.page-middle-banner -->
@@ -396,7 +395,7 @@
 								<input type="text" placeholder="Sujet" name="_subject">
 							</div> <!-- /.single-input -->
 							<textarea placeholder="Ecrire un message" name="message"></textarea>
-					    <input type="submit" class="tran3s p-color-bg" value="Envoyer Un Message">
+					    <input type="submit" class="submit-message" value="Envoyer Un Message">
 							<input type="hidden" name="_next" value="https://site.io/thanks.html" />
 						</form>
 
@@ -435,16 +434,14 @@
 					<a href="index.html" class="logo"><img src="<%= dato.info.logo.url %>" alt="Logo" style= "height: 50px;"></a>
 
 					<ul>
-						<li><a href="#" class="tran3s round-border"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-						<li><a href="#" class="tran3s round-border"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-						<li><a href="#" class="tran3s round-border"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
-						<li><a href="#" class="tran3s round-border"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-						<li><a href="#" class="tran3s round-border"><i class="fa fa-skype" aria-hidden="true"></i></a></li>
-						<li><a href="#" class="tran3s round-border"><i class="fa fa-flickr" aria-hidden="true"></i></a></li>
-						<li><a href="#" class="tran3s round-border"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
-						<li><a href="#" class="tran3s round-border"><i class="fa fa-rss" aria-hidden="true"></i></a></li>
+            <li><a href="#" class="tran3s round-border"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+            <li><a href="#" class="tran3s round-border"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+            <li><a href="" class="tran3s round-border"><i class="fa fa-phone" aria-hidden="true"></i></a> </li>
+            <li><p><%= dato.info.telephone %></p></li>
+            <li><a href="" class="tran3s round-border"><i class="fa fa-envelope-o" aria-hidden="true"> </i></a> </li>
+            <li><p><%= dato.info.email %></p></li>
 					</ul>
-<!-- 					<p>Copyright @2018 All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a></p> -->
+
 				</div>
 			</footer>
 
