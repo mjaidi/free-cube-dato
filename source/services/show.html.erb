@@ -1,13 +1,44 @@
 <% service = dato.services[index] %>
 
-    <div id="main" role="main" class="text-center">
-      <div class="background-image-projet" style="background-image: url('<%= image_path(service.photo.url)%>'); background-size: cover; height: 60vh; width: 100%; background-position: center;">
-      </div>
-        <div class="">
-          <h2><%= service.nom %></h2>
+    <div id="main-show-banner" role="main" class="text-center">
+      <div class="background-image-projet" style="background-image: url('<%= image_path(service.photo.url)%>');">
+        <div class="center-show">
+          <%= service.icon %>
+          <%= service.nom %>
         </div>
-      <p><%= service.description %></p>
-
+      </div>
+    <div class="wrapper">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12 col-xs-9 float-right text-left left-container">
+            <h2><%=service.titre_de_article%></h2>
+            <br>
+            <% service.article_m.each do |block| %>
+              <br>
+              <h6><%= block.sous_titre if block.item_type.name == "Titre Article" %></h6> 
+              <br>
+              <p><%= block.bloc_de_texte if block.item_type.name == "Contenu" %></p> 
+            <% end %>
+          </div>
+          <div class="col-xs-12 col-md-3 float-left text-center">
+            <h4>Autres Services</h4>
+            <hr>
+            <ul>
+              <% dato.services.each_with_index do |service, i| %>
+              <div class="box-service">
+                <a href="/services/<%=i%>.html">
+                  <li>
+                    <h3>  <%= service.icon %>  </h3>
+                    <h6>  <%= service.nom %>   </h6>
+                  </li>
+                </a>
+              </div>
+              <% end %>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
     </div>
     <br>
   <hr>

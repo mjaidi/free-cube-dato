@@ -1,0 +1,44 @@
+.background-image-projet {
+  background-size: cover;
+  height: 40vh;
+  width: 100%;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  .center-show {
+    color: white;
+    font-size: 32px;
+    text-transform: uppercase;
+    margin: 10px;
+  }
+
+  margin-bottom: 40px;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.left-container {
+  padding-left: 40px !important;
+}
+.box-service {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 1px 1px 3px #ccc;
+  margin-bottom: 10px;
+  &:hover{
+    background: #5fa3ca;
+    color: white;
+  }
+  a {
+    margin: 10px;
+    padding: 20px;
+    border-radius: 5px;
+    border: 0.5 solid black;
+    text-align: center;
+  }
+}
