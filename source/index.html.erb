@@ -20,6 +20,10 @@
 		<link rel="stylesheet" type="text/css" href="css/style.css">
 		<!-- responsive style sheet -->
 		<link rel="stylesheet" type="text/css" href="css/responsive.css">
+		
+
+		<!-- Light-gallery -->
+		  <link type="text/css" rel="stylesheet" href="https://cdn.rawgit.com/sachinchoolur/lightgallery.js/master/dist/css/lightgallery.css">
 
 
 		<!-- Fix Internet Explorer ______________________________________-->
@@ -237,11 +241,21 @@
 								<div class="single-img">
 									<img src="<%=p.photo_du_projet[0].url%>" alt="Image">
 									<div class="opacity">
-										<div class="border-shape"><div><div>
-											<h6><%= p.titre_du_projet %></h6>
-											<ul>
-												<li><%= p.description %></li>
-											</ul></div></div>
+										<div class="border-shape">
+											<div id="lightgallery">
+												<a href="<%=p.photo_du_projet[0].url%>"><img src="<%=p.photo_du_projet[0].url%>" class = "image-light-gallery" alt="Image"></a>
+				                <% if p.photo_du_projet.length > 0 %>
+				                <% p.photo_du_projet[1..p.photo_du_projet.length].each do |photo|  %>
+				                  <a href="<%= photo.url%>" class="hidden"><img src="<%=photo.url%>" class="hidden" alt="Image"></a>
+				                <% end %> 
+				                <% end %>
+				              </div>
+				              <div class="title-projet text-center">
+												<h6><%= p.titre_du_projet %></h6>
+												<ul>
+													<li><%= p.description %></li>
+												</ul>
+											</div>
 										</div> <!-- /.border-shape -->
 									</div> <!-- /.opacity -->
 								</div> <!-- /.single-img -->
@@ -505,6 +519,22 @@
 		<!-- Theme js -->
 		<script type="text/javascript" src="js/theme.js"></script>
 		<script type="text/javascript" src="js/map-script.js"></script>
+		
+		<!-- lightGallery -->
+		    <script src="https://cdn.rawgit.com/sachinchoolur/lightgallery.js/master/dist/js/lightgallery.js"></script>
+    <script src="https://cdn.rawgit.com/sachinchoolur/lg-pager.js/master/dist/lg-pager.js"></script>
+    <script src="https://cdn.rawgit.com/sachinchoolur/lg-autoplay.js/master/dist/lg-autoplay.js"></script>
+    <script src="https://cdn.rawgit.com/sachinchoolur/lg-share.js/master/dist/lg-share.js"></script>
+    <script src="https://cdn.rawgit.com/sachinchoolur/lg-zoom.js/master/dist/lg-zoom.js"></script>
+    <script src="https://cdn.rawgit.com/sachinchoolur/lg-hash.js/master/dist/lg-hash.js"></script>
+    <script src="https://cdn.rawgit.com/sachinchoolur/lg-thumbnail.js/master/dist/lg-thumbnail.js"></script>
+    <script src="https://cdn.jsdelivr.net/picturefill/2.3.1/picturefill.min.js"></script>
+    <script>
+      lightGallery(document.getElementById('lightgallery'), {
+        thumbnail: true
+      });
+    </script>
+
 
 		</div> <!-- /.main-page-wrapper -->
 	</body>

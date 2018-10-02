@@ -421,7 +421,7 @@ animation-delay: .8s;
   width:100%;
   top:0;
   left:0;
-  z-index: 9999;
+  z-index: 999;
   background: rgba(0,0,0,0.5);
   margin:0;
   animation-name: menu_sticky;
@@ -709,6 +709,22 @@ animation-delay: .8s;
           transform: translate3D(0,0,0);
 }
 
+.title-projet {
+  position: relative;
+  top: -200px;
+  padding: 50px 0;
+}
+.title-projet h6{
+  color: white;
+}
+
+.title-projet p {
+  color: white;
+}
+
+.image-light-gallery {
+  opacity: 0;
+}
 /*** 
 
 ====================================================================
