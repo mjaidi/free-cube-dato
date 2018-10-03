@@ -576,6 +576,14 @@ animation-delay: .8s;
   background: #232a34;
   border-radius: 10px;
 }
+
+.savoir-plus {
+  color: white;
+  font-weight: bold;
+}
+.savoir-plus:hover {
+  color:rgba(95, 163, 202,1); ;
+}
 /*** 
 
 ====================================================================
@@ -712,7 +720,10 @@ animation-delay: .8s;
 .title-projet {
   position: relative;
   top: -200px;
+  padding: 50px 0;
+  z-index: -1;
 }
+
 .title-projet h6{
   color: white;
 }
@@ -723,6 +734,7 @@ animation-delay: .8s;
 
 .image-light-gallery {
   opacity: 0;
+  z-index: 999;
 }
 /*** 
 

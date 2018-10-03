@@ -200,7 +200,8 @@
 									<div class="icon tran3s"> <%= p.icon %> </div>
 									<h6> <%= link_to p.nom, "services/#{i}.html", class: "tran3s", target: "_blank" %> </h6>
 								</div>
-								<p><%= p.description %> </p>
+								<p><%= p.description %> <br>
+                <%= link_to "en savoir plus...", "services/#{i}.html", class: "savoir-plus", target: "_blank" %></p>
 							</div> <!-- /.single-service-content -->
 						</div> <!-- /.col-lg -->
 						
@@ -242,8 +243,8 @@
 									<img src="<%=p.photo_du_projet[0].url%>" alt="Image">
 									<div class="opacity">
 										<div class="border-shape">
-											<div id="lightgallery">
-												<a href="<%=p.photo_du_projet[0].url%>"><img src="<%=p.photo_du_projet[0].url%>" class = "image-light-gallery" alt="Image"></a>
+											<div class="lightgallery">
+												<a href="<%=p.photo_du_projet[0].url%>" class = "image-light-gallery"><img src="<%=p.photo_du_projet[0].url%>" alt="Image"></a>
 				                <% if p.photo_du_projet.length > 0 %>
 				                <% p.photo_du_projet[1..p.photo_du_projet.length].each do |photo|  %>
 				                  <a href="<%= photo.url%>" class="hidden"><img src="<%=photo.url%>" class="hidden" alt="Image"></a>
@@ -530,8 +531,10 @@
     <script src="https://cdn.rawgit.com/sachinchoolur/lg-thumbnail.js/master/dist/lg-thumbnail.js"></script>
     <script src="https://cdn.jsdelivr.net/picturefill/2.3.1/picturefill.min.js"></script>
     <script>
-      lightGallery(document.getElementById('lightgallery'), {
-        thumbnail: true
+      document.querySelectorAll('.lightgallery').forEach((i) => {
+        lightGallery(i, {
+          thumbnail: true
+        }); 
       });
     </script>
 
