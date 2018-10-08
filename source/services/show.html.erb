@@ -1,7 +1,7 @@
 <% service = dato.services[index] %>
 
     <div id="main-show-banner" role="main" class="text-center">
-      <div class="background-image-projet" style="background-image: url('<%= image_path(service.photo.url)%>');">
+      <div class="background-image-projet" style="background-image: linear-gradient(-225deg, rgba(80,100,100,0.6) 0%, rgba(80,100,100,0.2) 60%), url('<%= image_path(service.photo.url)%>');">
         <div class="center-show">
           <%= service.icon %>
           <%= service.nom %>
@@ -11,40 +11,32 @@
       <div class="container">
         <div class="row">
           <div class="col-xs-12 col-xs-9 float-right text-left left-container">
-            <div class="contenu-photo">
-              <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+            <% if service.photos_article.length > 1 %>
+              <div  class="contenu-photo text-center">
                 <!-- Wrapper for slides -->
-                <div class="carousel-inner" role="listbox">
                     <div class="lightgallery">
-                      <% if service.photos_article.length >= 0 %>
-                      <% service.photos_article.each do |photo| %>
-                      <div class="item">
-                        <a href="<%=photo.url%>" class = "image-light-gallery"><img src="<%=photo.url%>" alt="Image"></a>
-                      </div>
-                      <% end %> 
-                      <% end %>
+                        <% service.photos_article[0..1].each do |photo|  %>
+                        <a href="<%=photo.url%>" class = "image-light-gallery-dark"><img src="<%=photo.url%>" style="height: 20vh;" alt="Image"></a>
+                        <% end %> 
+                      <% if service.photos_article.length > 2 %>
+                        <% service.photos_article[2..service.photos_article.length].each do |photo|  %>
+                          <a href="<%= photo.url%>" class="hidden"><img src="<%=photo.url%>" class="hidden" alt="Image"></a>
+                        <% end %> 
+                        <% end %>
                     </div>
-                </div>
 
-                <!-- Controls -->
-                <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-                  <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-                  <span class="sr-only">Previous</span>
-                </a>
-                <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-                  <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                  <span class="sr-only">Next</span>
-                </a>
-              </div>
 
             </div>
+            <% end %>
+            <br>
             <h2><%=service.titre_de_article%></h2>
             <br>
             <% service.article_m.each do |block| %>
               <br>
               <h6><%= block.sous_titre if block.item_type.name == "Titre Article" %></h6> 
-              <br>
-              <p><%= block.bloc_de_texte if block.item_type.name == "Contenu" %></p> 
+              <div class="<%= 'merge-text' if block.item_type.name == 'Contenu' %>">
+                <p><%= block.bloc_de_texte if block.item_type.name == "Contenu" %></p>
+              </div> 
             <% end %>
           </div>
           <div class="col-xs-12 col-md-3 float-left text-center">

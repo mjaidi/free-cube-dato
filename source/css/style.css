@@ -455,11 +455,11 @@ animation-delay: .8s;
   text-transform: uppercase;
 }
 
-.banner h1 {
+/*.banner h1 {
     background: rgba(0,0,0,0.2);
     padding: 7px;
     border-radius: 2px;
-  }
+  }*/
 /*** 
 
 ====================================================================
@@ -583,6 +583,10 @@ animation-delay: .8s;
 }
 .savoir-plus:hover {
   color:rgba(95, 163, 202,1); ;
+}
+
+.merge-text {
+  white-space: pre-wrap;
 }
 /*** 
 

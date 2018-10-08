@@ -22,7 +22,21 @@
 }
 
 .left-container {
-  padding-left: 40px !important;
+  padding-left: 0px !important;
+}
+
+.col-xs-9 {
+  width: 90% !important;
+}
+
+@media (min-width: 992px) {
+  .left-container {
+    padding-left: 40px !important;
+  }
+
+  .col-xs-9 {
+    width: 75% !important;
+  }
 }
 .box-service {
   display: flex;
