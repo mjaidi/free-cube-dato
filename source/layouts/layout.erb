@@ -24,6 +24,11 @@
     <link rel="stylesheet" type="text/css" href="../../css/responsive.css">
 
 
+    <!-- Light-gallery -->
+      <link type="text/css" rel="stylesheet" href="https://cdn.rawgit.com/sachinchoolur/lightgallery.js/master/dist/css/lightgallery.css">
+
+
+
     <!-- Fix Internet Explorer ______________________________________-->
 
     <!--[if lt IE 9]>
@@ -62,6 +67,22 @@
     <script type="text/javascript" src="../../vendor/bootstrap/bootstrap.min.js"></script>
 
     <script type="text/javascript" src="../../js/theme.js"></script>
-
+        <!-- lightGallery -->
+        <script src="https://cdn.rawgit.com/sachinchoolur/lightgallery.js/master/dist/js/lightgallery.js"></script>
+    <script src="https://cdn.rawgit.com/sachinchoolur/lg-pager.js/master/dist/lg-pager.js"></script>
+    <script src="https://cdn.rawgit.com/sachinchoolur/lg-autoplay.js/master/dist/lg-autoplay.js"></script>
+    <script src="https://cdn.rawgit.com/sachinchoolur/lg-share.js/master/dist/lg-share.js"></script>
+    <script src="https://cdn.rawgit.com/sachinchoolur/lg-zoom.js/master/dist/lg-zoom.js"></script>
+    <script src="https://cdn.rawgit.com/sachinchoolur/lg-hash.js/master/dist/lg-hash.js"></script>
+    <script src="https://cdn.rawgit.com/sachinchoolur/lg-thumbnail.js/master/dist/lg-thumbnail.js"></script>
+    <script src="https://cdn.jsdelivr.net/picturefill/2.3.1/picturefill.min.js"></script>
+    <script>
+      document.querySelectorAll('.lightgallery').forEach((i) => {
+        lightGallery(i, {
+          thumbnail: true
+        }); 
+      });
+    </script>
+    
   </body>
   </html>

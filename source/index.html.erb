@@ -228,10 +228,9 @@
 					<div class="project-menu">
 						<ul>
 	        				<li class="filter active tran3s" data-filter="all">Tous</li>
-							<li class="filter tran3s" data-filter=".Container">Containers</li>
-							<li class="filter tran3s" data-filter=".Villa">Villas</li>
-							<li class="filter tran3s" data-filter=".Bureau">Bureaux</li>
-							<li class="filter tran3s" data-filter=".Rénovation">Rénovation</li>
+							<li class="filter tran3s" data-filter=".Container">Aménagement bureaux</li>
+							<li class="filter tran3s" data-filter=".Villa">Construction villa</li>
+							<li class="filter tran3s" data-filter=".Bureau">Construction conteneur</li>
 	        			</ul>
 					</div>
 
@@ -253,8 +252,12 @@
 				              </div>
 				              <div class="title-projet text-center">
 												<h6><%= p.titre_du_projet %></h6>
+                        <ul>
+                          <li><%= p.description %></li>
+                        </ul>
 												<ul>
-													<li><%= p.description %></li>
+                          <li><%= p.lieu %></li>
+													<li><%= p.date %></li>
 												</ul>
 											</div>
 										</div> <!-- /.border-shape -->
