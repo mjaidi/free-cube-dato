@@ -5,3 +5,4 @@
 lightgallery.js@^1.1.1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/lightgallery.js/-/lightgallery.js-1.1.1.tgz#34eaf27031416716f5e5b7b8351c7202475ec4ef"
+  integrity sha512-nn5ld7pfW/DAzdt6/Zopy5ZOYgoBaP7nOhOxhC7U1k8Q6weS3omRl1cP9uMFSIBbIt0mN+veGZf6oLlZGzctpA==
