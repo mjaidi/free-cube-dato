@@ -266,13 +266,13 @@ animation-delay: .8s;
 .blog-details-post-wrapper .list-img-wrapper ul li a:hover,.blog-details-post-wrapper .post-comment form button:hover,
 .blog-details-post-wrapper .post-share-area .share li a:hover,.theme-main-menu.navbar .nav>li ul li a:hover,
 .blog-details-post-wrapper .post-share-area .share li a.active {
-  color:#5fa3ca;
+  color:rgb(187,187,187);
 }
 .p-color-bg,.theme-title h2:before,#about-us .single-about-content:hover .icon,
 #skill-section .codeconSkillbar .skillBar,#our-client .owl-theme .owl-dots .owl-dot.active span,
 #our-client .owl-theme .owl-dots .owl-dot:hover span,
 .blog-details-post-wrapper .comment-area .single-comment .comment button:hover {
-  background: #5fa3ca;
+  background: rgb(187,187,187);
 }
 .banner .project-button,#about-us .icon,#about-us .single-about-content a.more,
 #service-section .single-service-content:hover,#project-section .project-menu ul li.active,
@@ -282,7 +282,7 @@ animation-delay: .8s;
 #contact-section .contact-address-content .left-side ul li .icon,#contact-section .send-message form button,
 .sidebar-tags ul li a:hover,.blog-details-post-wrapper .post-comment form button,
 .blog-details-post-wrapper .post-comment textarea:focus,.blog-details-post-wrapper .post-comment input:focus {
-  border-color:#5fa3ca;
+  border-color:rgb(187,187,187);
   border-style: solid;
 }
 .banner .project-button {
@@ -582,7 +582,7 @@ animation-delay: .8s;
   font-weight: bold;
 }
 .savoir-plus:hover {
-  color:rgba(95, 163, 202,1); ;
+  color:rgba(187, 187, 187); ;
 }
 
 .merge-text {
@@ -631,7 +631,7 @@ animation-delay: .8s;
   left:0;
   right: 0;
   bottom: 0;
-  background: rgba(95, 163, 202,0.9);
+  background: rgba(187,187,187);
   opacity: 0;
   -webkit-transform: scale(0.2);
      -moz-transform: scale(0.2);
@@ -901,7 +901,7 @@ animation-delay: .8s;
   text-transform: uppercase;
   border-width: 1px;
   width: 100%;
-  background: #5fa3ca;
+  background: rgb(187,187,187);
 }
 #contact-section .submit-message:hover {
   background: #fff;
@@ -1383,7 +1383,7 @@ flex-direction: column;
   padding :30px;
   text-align:center;
 }
-h1{
+.wrapper-2 h1{
     font-family: 'Kaushan Script', cursive;
   font-size:4em;
   letter-spacing:3px;
