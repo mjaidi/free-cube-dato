@@ -631,7 +631,7 @@ animation-delay: .8s;
   left:0;
   right: 0;
   bottom: 0;
-  background: rgba(187,187,187);
+  background: rgb(187,187,187);
   opacity: 0;
   -webkit-transform: scale(0.2);
      -moz-transform: scale(0.2);
