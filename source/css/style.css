@@ -582,7 +582,7 @@ animation-delay: .8s;
   font-weight: bold;
 }
 .savoir-plus:hover {
-  color:rgba(187, 187, 187); ;
+  color:rgb(187, 187, 187); ;
 }
 
 .merge-text {
@@ -1365,7 +1365,6 @@ img.tp-kbimg {
 /*Contact Email Thank You Page*/
 .content-thank-you-wrapper {
   box-sizing:border-box;
- /* outline:1px solid ;*/
 }
 .content-thank-you-wrapper {
 padding: 80px 0;
