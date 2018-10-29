@@ -5,10 +5,21 @@
 		<!-- For IE -->
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-		<!-- For Resposive Device -->
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Titles and Meta Tags -->
+		<title><% dato.info.seo_titre_site %></title>
+    <meta name="description" content="<%= dato.info.seo_description %>">
 
-		<title>Free Cube</title>
+    <!-- Facebook Open Graph data -->
+    <meta property="og:title" content="<%= dato.info.seo_titre_site %>" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="<%= request.original_url %>" />
+    <meta property="og:image" content="<%= dato.info.seo_image.url %>" />
+    <meta property="og:description" content="<%= dato.info.seo_description %>" />
+    <meta property="og:site_name" content="<%= dato.info.seo_titre_site %>" />
+
+    <!-- For Resposive Device -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 
 		<!-- Favicon -->
 		<link rel="icon" type="image/png" sizes="56x56" href="<%= dato.info.favicon.url %>">
