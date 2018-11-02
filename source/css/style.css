@@ -90,7 +90,7 @@
   bottom:0px;
   width: 6px;
   height: 5px;
-  background:#e04f5d;
+  background:#000;
   position:absolute;
   animation: preloader_1 1.5s  infinite ease-in-out;
 }
@@ -113,10 +113,10 @@ left:44px;
 animation-delay: .8s;
 }
 @keyframes preloader_1 {
-    0% {height:5px;transform:translateY(0px);background:#e62d3f;}
-    25% {height:30px;transform:translateY(15px);background:#e62d3f;}
-    50% {height:5px;transform:translateY(0px);background:#ee2438;}
-    100% {height:5px;transform:translateY(0px);background:#ee2438;}
+    0% {height:5px;transform:translateY(0px);background:#000;}
+    25% {height:30px;transform:translateY(15px);background:#000;}
+    50% {height:5px;transform:translateY(0px);background:#777;}
+    100% {height:5px;transform:translateY(0px);background:#777;}
 }
 
 
@@ -266,13 +266,13 @@ animation-delay: .8s;
 .blog-details-post-wrapper .list-img-wrapper ul li a:hover,.blog-details-post-wrapper .post-comment form button:hover,
 .blog-details-post-wrapper .post-share-area .share li a:hover,.theme-main-menu.navbar .nav>li ul li a:hover,
 .blog-details-post-wrapper .post-share-area .share li a.active {
-  color:rgb(187,187,187);
+  color:rgb(90,94,107);
 }
 .p-color-bg,.theme-title h2:before,#about-us .single-about-content:hover .icon,
 #skill-section .codeconSkillbar .skillBar,#our-client .owl-theme .owl-dots .owl-dot.active span,
 #our-client .owl-theme .owl-dots .owl-dot:hover span,
 .blog-details-post-wrapper .comment-area .single-comment .comment button:hover {
-  background: rgb(187,187,187);
+  background: rgb(90,94,107);
 }
 .banner .project-button,#about-us .icon,#about-us .single-about-content a.more,
 #service-section .single-service-content:hover,#project-section .project-menu ul li.active,
@@ -282,7 +282,7 @@ animation-delay: .8s;
 #contact-section .contact-address-content .left-side ul li .icon,#contact-section .send-message form button,
 .sidebar-tags ul li a:hover,.blog-details-post-wrapper .post-comment form button,
 .blog-details-post-wrapper .post-comment textarea:focus,.blog-details-post-wrapper .post-comment input:focus {
-  border-color:rgb(187,187,187);
+  border-color:rgb(90,94,107);
   border-style: solid;
 }
 .banner .project-button {
@@ -302,8 +302,8 @@ animation-delay: .8s;
   left:0;
   right: 0;
   z-index: 999;
-  padding-top: 20px;
-  background: rgba(0,0,0,0.5);
+  padding: 5px;
+  background: rgba(0,0,0,1);
 }
 
 .theme-main-menu .navbar-nav>li>a {
@@ -388,8 +388,8 @@ animation-delay: .8s;
   left:0;
   right: 0;
   z-index: 999;
-  padding-top: 20px;
-  background: #1e1e1e;
+  padding: 5px;
+  background: rgb(0,0,0);
 }
 .theme-main-headers li.dropdown-holder .fa {
   position: relative;
@@ -403,7 +403,15 @@ animation-delay: .8s;
   cursor: pointer;
   line-height: 44px;
 }
+.flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
 
+.theme-main-header .logo-img {
+  height: 100px;
+}
 /***
 
 ====================================================================
@@ -422,7 +430,7 @@ animation-delay: .8s;
   top:0;
   left:0;
   z-index: 999;
-  background: rgba(0,0,0,0.5);
+  background: rgba(0,0,0,1);
   margin:0;
   animation-name: menu_sticky;
   animation-duration: 0.70s;
@@ -430,6 +438,9 @@ animation-delay: .8s;
 }
 .theme-main-header.fixed .logo {
   margin-top: -8px;
+}
+.theme-main-header.fixed .logo-img {
+  height: 100px;
 }
 /***
 
@@ -440,6 +451,12 @@ animation-delay: .8s;
  ***/
 .rev_slider_wrapper {
   background: #000;
+/*  height: 80vh !important;
+  overflow: hidden !important;*/
+}
+
+#main-banner-slider {
+/*height: 100% !important;*/
 }
 .banner h1,.banner h6,.banner .project-button {
   color:#fff;
@@ -454,6 +471,10 @@ animation-delay: .8s;
   border-width: 1px;
   text-transform: uppercase;
 }
+
+/*.slider{height:400px;}
+.slider li{height: 400px;}
+#widget-block{margin-top:400px;}*/
 
 /*.banner h1 {
     background: rgba(0,0,0,0.2);
@@ -504,7 +525,7 @@ animation-delay: .8s;
 
  ***/
 #service-section {
-  background: #232a34;
+  background: rgb(0,0,0);
   padding-bottom: 80px;
 }
 #service-section .theme-title h2,
@@ -518,12 +539,11 @@ animation-delay: .8s;
   padding-top: 25px;
 }
 #service-section .single-service-content {
-  border:1px solid #808489;
+  border:3px solid #fff;
   text-align: center;
   margin-bottom: 20px;
   padding: 118px 23px 65px 23px;
   overflow: hidden;
-  border-radius: 5px;
 }
 #service-section .single-service-content p {
   -webkit-transition-delay: 0.3s; /* Safari */
@@ -537,8 +557,8 @@ animation-delay: .8s;
 }
 #service-section .single-service-content .icon-heading {
   position: absolute;
-  width: 100%;
-  left:0;
+  width: 90%;
+  left:5%;
   right: 0;
   top:120px;
 }
@@ -562,7 +582,6 @@ animation-delay: .8s;
        -o-transform: translate3D(0,0,0);
           transform: translate3D(0,0,0);
   background: rgba(35, 42, 52,0.4);
-  border-radius: 5px;
   padding: 5px;
 }
 #service-section .single-service-content:hover .icon-heading {
@@ -573,8 +592,7 @@ animation-delay: .8s;
 }
 #service-section .single-service-content:hover .icon-heading .icon {
 
-  background: #232a34;
-  border-radius: 10px;
+  background: #000;
 }
 
 .savoir-plus {
@@ -587,6 +605,13 @@ animation-delay: .8s;
 
 .merge-text {
   white-space: pre-wrap;
+}
+
+#service-section .single-service-content:hover .icon-heading .icon {
+  color: #fff;
+}
+#service-section .single-service-content:hover {
+  border: 3px solid #fff;
 }
 /***
 
@@ -631,7 +656,7 @@ animation-delay: .8s;
   left:0;
   right: 0;
   bottom: 0;
-  background: rgb(187,187,187);
+  background: rgb(90,94,107);
   opacity: 0;
   -webkit-transform: scale(0.2);
      -moz-transform: scale(0.2);
@@ -901,10 +926,10 @@ animation-delay: .8s;
   text-transform: uppercase;
   border-width: 1px;
   width: 100%;
-  background: rgb(187,187,187);
+  background: rgb(90,94,107);
 }
 #contact-section .submit-message:hover {
-  background: #fff;
+  background: #000;
 }
 #contact-section {
   margin-bottom: 100px;
@@ -983,7 +1008,7 @@ animation-delay: .8s;
  ***/
 footer {
   margin: 0;
-  background: #1e1e1e;
+  background: rgb(0,0,0);
   padding: 60px 0 25px 0;
   text-align: center;
 }

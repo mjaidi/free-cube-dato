@@ -45,8 +45,11 @@
   box-shadow: 1px 1px 3px #ccc;
   margin-bottom: 10px;
   &:hover{
-    background: rgb(187,187,187);
+    background: rgb(90,94,107);
     color: white;
+    h3, h6 {
+      color: white;
+    }
   }
   a {
     margin: 10px;
