@@ -410,7 +410,7 @@ animation-delay: .8s;
 }
 
 .theme-main-header .logo-img {
-  height: 100px;
+  height: 90px;
 }
 /***
 
@@ -440,7 +440,10 @@ animation-delay: .8s;
   margin-top: -8px;
 }
 .theme-main-header.fixed .logo-img {
-  height: 100px;
+  height: 90px;
+}
+.theme-main-headers.fixed-top .logo-img {
+  height: 90px;
 }
 /***
 
